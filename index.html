@@ -1,5 +1,5 @@
-<!-- Orlando poster - argument & analysis by Mykhail Poddenezhnyi.
-     Quotes left as placeholders to be filled from his own copy. -->
+<!-- Orlando poster (landscape) - argument & analysis by Mykhail Poddenezhnyi.
+     Quotes selected from his own copy of the novel. -->
 <meta charset="utf-8">
 <title>Orlando - poster</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -9,134 +9,131 @@
 <style>
   :root{
     --bark:#2B2117; --ink:#26200F; --paper:#E7E3D4; --panel:#DCD6C2;
-    --panel2:#D2CBB4; --oak:#5C6A43; --oak-d:#46522F; --brass:#A8823C;
-    --rule:#C4BCA6; --quote:#766D54;
+    --oak:#5C6A43; --oak-d:#46522F; --brass:#A8823C; --rule:#C4BCA6; --quote:#766D54;
   }
   *{box-sizing:border-box}
   html,body{margin:0;background:#cfc9b6;color:var(--ink);
     font-family:"EB Garamond",Georgia,serif;-webkit-font-smoothing:antialiased}
 
-  .bar{position:fixed;top:14px;right:14px;z-index:50}
-  .bar button{font-family:"EB Garamond",serif;font-size:14px;letter-spacing:.04em;
+  .bar{position:fixed;top:12px;right:12px;z-index:50}
+  .bar button{font-family:"EB Garamond",serif;font-size:13px;letter-spacing:.04em;
     border:1px solid var(--bark);background:var(--paper);color:var(--bark);
-    padding:8px 14px;border-radius:2px;cursor:pointer}
+    padding:7px 12px;border-radius:2px;cursor:pointer}
   .bar button:hover{background:var(--bark);color:var(--paper)}
   .bar button:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
 
-  .stage{display:flex;justify-content:center;padding:34px 18px 60px}
+  .stage{min-height:100vh;display:flex;justify-content:center;align-items:stretch;
+    padding:16px}
 
-  .poster{width:960px;min-height:1358px;background:var(--paper);
-    padding:0 0 46px;position:relative;overflow:hidden;
-    box-shadow:0 24px 70px rgba(0,0,0,.28)}
+  .poster{width:100%;max-width:1440px;background:var(--paper);
+    display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.28);
+    position:relative}
 
-  /* ===== masthead ===== */
-  .top{background:var(--bark);color:var(--paper);padding:40px 58px 30px;position:relative}
+  /* ===== header band ===== */
+  .top{background:var(--bark);color:var(--paper);padding:26px 40px;
+    display:flex;align-items:center;gap:48px}
+  .top .brandcol{flex:none}
   .top .eyebrow{font-family:"Cormorant Garamond",serif;text-transform:uppercase;
-    letter-spacing:.46em;font-size:13px;font-weight:600;color:#C9B98C;margin:0 0 8px}
-  .top h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:128px;
+    letter-spacing:.42em;font-size:12px;font-weight:600;color:#C9B98C;margin:0 0 6px}
+  .top h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:96px;
     line-height:.82;letter-spacing:.02em;margin:0}
   .top h1 .o{color:var(--brass)}
-  .top .sub{font-style:italic;font-size:23px;margin:12px 0 0;color:#E7E3D4cc}
-  .branch{position:absolute;right:40px;top:34px;width:230px;height:120px;opacity:.85}
+  .top .sub{font-style:italic;font-size:19px;margin:9px 0 0;color:#E7E3D4cc}
+  .top .divider{width:1px;align-self:stretch;background:#ffffff22;flex:none}
+  .top .thesiscol{flex:1}
+  .top .kicker{font-family:"Cormorant Garamond",serif;text-transform:uppercase;
+    letter-spacing:.32em;font-size:12px;font-weight:700;color:#C9B98C;margin:0 0 9px}
+  .top .thesis{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:23px;
+    line-height:1.34;margin:0;color:#F1ECDD;max-width:60ch}
+  .top .core-word{color:var(--brass);font-style:italic}
+  .top .note{font-size:12.5px;font-style:italic;color:#E7E3D499;margin:10px 0 0}
 
-  /* ===== hero diagram ===== */
-  .hero{display:grid;grid-template-columns:360px 1fr;gap:40px;align-items:center;
-    padding:36px 58px 30px}
-  .medallion{width:360px;height:360px}
-  .hero-copy .kicker{font-family:"Cormorant Garamond",serif;text-transform:uppercase;
-    letter-spacing:.34em;font-size:14px;font-weight:700;color:var(--oak);margin:0 0 14px}
-  .hero-copy p.thesis{font-family:"Cormorant Garamond",serif;font-weight:500;
-    font-size:30px;line-height:1.32;margin:0;color:var(--ink)}
-  .hero-copy .core-word{color:var(--brass);font-style:italic}
-  .hero-copy .note{font-size:14px;font-style:italic;color:var(--quote);margin:14px 0 0}
-  .caption{grid-column:1/2;text-align:center;font-style:italic;font-size:15px;
-    color:var(--quote);margin:14px 6px 0;line-height:1.4}
-
-  /* ===== era timeline ===== */
-  .timeline{margin:8px 58px 6px;padding:20px 26px;background:var(--panel);
-    border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  /* ===== timeline band ===== */
+  .timeline{padding:14px 40px 16px;background:var(--panel);
+    border-bottom:1px solid var(--rule)}
   .timeline h3{font-family:"Cormorant Garamond",serif;text-transform:uppercase;
-    letter-spacing:.3em;font-size:12px;font-weight:700;color:var(--oak);margin:0 0 16px;
+    letter-spacing:.3em;font-size:11px;font-weight:700;color:var(--oak);margin:0 0 12px;
     text-align:center}
-  .track{display:flex;align-items:flex-start;justify-content:space-between;
-    position:relative}
-  .track::before{content:"";position:absolute;left:6%;right:6%;top:7px;height:1px;
+  .track{display:flex;align-items:flex-start;justify-content:space-between;position:relative}
+  .track::before{content:"";position:absolute;left:5%;right:5%;top:7px;height:1px;
     background:var(--bark);opacity:.45}
   .stop{flex:1;text-align:center;position:relative;z-index:1}
   .stop .dot{width:14px;height:14px;border-radius:50%;background:var(--paper);
-    border:1.5px solid var(--bark);margin:0 auto 9px}
+    border:1.5px solid var(--bark);margin:0 auto 8px}
   .stop.key .dot{background:var(--brass);border-color:var(--brass);width:16px;height:16px}
   .stop.bend .dot{background:var(--paper);border:1.5px dashed var(--oak)}
   .stop .era{font-family:"Cormorant Garamond",serif;font-size:16px;font-weight:600;
-    color:var(--bark);line-height:1.15}
+    color:var(--bark);line-height:1.12}
   .stop .meta{font-size:12.5px;font-style:italic;color:var(--quote);margin-top:2px}
   .stop .rn{display:inline-block;font-family:"Cormorant Garamond",serif;font-weight:700;
-    font-size:12px;letter-spacing:.1em;color:var(--brass);margin-top:3px}
+    font-size:11px;letter-spacing:.1em;color:var(--brass);margin-top:3px}
 
-  /* ===== evidence cards ===== */
-  .evidence{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
-    padding:24px 58px 6px}
+  /* ===== main row ===== */
+  .main{flex:1;display:grid;grid-template-columns:0.92fr 1fr 1fr 1fr;gap:22px;
+    padding:24px 40px}
+
+  .core-cell{display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:0 6px}
+  .medallion{width:100%;max-width:264px}
+  .core-cap{font-style:italic;font-size:14px;color:var(--quote);margin:16px 4px 0;
+    line-height:1.42}
+
   .card{background:var(--panel);border:1px solid var(--rule);border-top:3px solid var(--oak);
-    padding:20px 20px 22px;display:flex;flex-direction:column}
-  .card .cmark{display:flex;justify-content:center;margin:2px 0 12px}
+    padding:18px 18px 20px;display:flex;flex-direction:column}
+  .card .cmark{display:flex;justify-content:center;margin:0 0 11px}
   .card .num{font-family:"Cormorant Garamond",serif;text-transform:uppercase;
     letter-spacing:.26em;font-size:12px;font-weight:700;color:var(--oak);text-align:center}
-  .card .ttl{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:25px;
+  .card .ttl{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:24px;
     color:var(--bark);text-align:center;line-height:1.05;margin:2px 0 3px}
-  .card .era{font-style:italic;font-size:13.5px;color:var(--quote);text-align:center;
-    margin-bottom:14px}
-  .qbox{border-left:3px solid var(--brass);padding:4px 0 4px 14px;
-    margin-bottom:14px;font-family:"Cormorant Garamond",serif;font-style:italic;
-    font-size:15px;line-height:1.42;color:var(--bark)}
+  .card .era{font-style:italic;font-size:13px;color:var(--quote);text-align:center;
+    margin-bottom:13px}
+  .qbox{border-left:3px solid var(--brass);padding:4px 0 4px 13px;margin-bottom:13px;
+    font-family:"Cormorant Garamond",serif;font-style:italic;font-size:14.5px;
+    line-height:1.4;color:var(--bark)}
   .qbox b{display:block;font-family:"EB Garamond",serif;font-style:normal;font-weight:700;
     text-transform:uppercase;letter-spacing:.14em;font-size:10px;color:var(--oak);
-    margin-bottom:6px}
-  .read{list-style:none;margin:0 0 14px;padding:0}
-  .read li{position:relative;padding-left:17px;font-size:14.5px;line-height:1.42;
-    margin-bottom:8px;color:var(--ink)}
+    margin-bottom:5px}
+  .read{list-style:none;margin:0 0 13px;padding:0}
+  .read li{position:relative;padding-left:16px;font-size:14px;line-height:1.4;
+    margin-bottom:7px;color:var(--ink)}
   .read li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;
     border:1px solid var(--oak);border-radius:50%}
   .read .tag{font-variant:small-caps;letter-spacing:.03em;color:var(--oak-d);font-weight:600}
-  .claim{margin-top:auto;font-family:"Cormorant Garamond",serif;font-size:17px;
-    font-weight:600;color:var(--bark);line-height:1.28;border-left:3px solid var(--brass);
+  .claim{margin-top:auto;font-family:"Cormorant Garamond",serif;font-size:16.5px;
+    font-weight:600;color:var(--bark);line-height:1.26;border-left:3px solid var(--brass);
     padding-left:12px}
   .claim b{color:var(--brass)}
 
-  /* ===== poem thread ===== */
-  .thread{margin:24px 58px 0;padding:18px 24px;background:var(--bark);color:var(--paper);
-    display:flex;align-items:center;gap:20px}
+  /* ===== poem thread band ===== */
+  .thread{background:var(--bark);color:var(--paper);padding:14px 40px;
+    display:flex;align-items:center;gap:18px}
   .thread svg{flex:none}
-  .thread .lead{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:23px;
-    display:block;margin-bottom:3px;color:#E9D9B4}
-  .thread p{margin:0;font-size:16px;line-height:1.42;color:#E7E3D4dd}
+  .thread .lead{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:21px;
+    color:#E9D9B4;margin-right:6px}
+  .thread p{margin:0;font-size:15px;line-height:1.4;color:#E7E3D4dd}
 
   /* ===== footer ===== */
-  .foot{margin:22px 58px 0;display:flex;justify-content:space-between;
-    align-items:flex-end;gap:24px;font-size:13.5px;color:var(--quote)}
-  .foot .who{color:var(--bark);font-size:15.5px}
+  .foot{padding:14px 40px;display:flex;justify-content:space-between;align-items:center;
+    gap:24px;font-size:13px;color:var(--quote);background:var(--paper)}
+  .foot .who{color:var(--bark);font-size:15px}
   .foot .who b{font-weight:600}
-  .foot .defence{max-width:48ch;font-style:italic;line-height:1.42}
+  .foot .defence{max-width:54ch;font-style:italic;line-height:1.4;text-align:right}
   .foot .defence b{font-style:normal;font-variant:small-caps;letter-spacing:.06em;
     color:var(--oak-d);font-weight:600}
 
   @media print{
-    @page{size:A1 portrait;margin:0}
+    @page{size:A1 landscape;margin:0}
     html,body{background:#fff}
-    .bar{display:none}.stage{padding:0}
-    .poster{box-shadow:none;width:100%;min-height:100vh}
+    .bar{display:none}.stage{padding:0;min-height:0}
+    .poster{box-shadow:none;max-width:none;min-height:100vh}
   }
-  @media (max-width:1000px){
-    .stage{padding:16px 6px 40px}
-    .poster{width:100%}
-    .top{padding:7vw 5vw 5vw}.top h1{font-size:21vw}.branch{display:none}
-    .hero{grid-template-columns:1fr;padding:6vw 5vw;text-align:center}
-    .medallion{margin:0 auto}.caption{grid-column:auto}
-    .timeline,.evidence,.thread,.foot{margin-left:5vw;margin-right:5vw}
-    .timeline,.evidence{padding-left:0;padding-right:0}
-    .evidence{grid-template-columns:1fr}
-    .track{flex-direction:column;gap:14px}.track::before{display:none}
-    .stop{text-align:left;display:flex;gap:10px;align-items:center}
-    .stop .dot{margin:0}
+  @media (max-width:880px){
+    .top{flex-direction:column;align-items:flex-start;gap:18px}
+    .top .divider{display:none}.top h1{font-size:22vw}
+    .track{flex-direction:column;gap:12px}.track::before{display:none}
+    .stop{text-align:left;display:flex;gap:10px;align-items:center}.stop .dot{margin:0}
+    .main{grid-template-columns:1fr;gap:16px}
+    .foot{flex-direction:column;align-items:flex-start}.foot .defence{text-align:left}
   }
 </style>
 
@@ -145,102 +142,75 @@
 <div class="stage">
 <article class="poster">
 
-  <!-- masthead -->
+  <!-- header band -->
   <header class="top">
-    <svg class="branch" viewBox="0 0 230 120" aria-hidden="true" fill="none"
-         stroke="#C9B98C" stroke-width="1.4" stroke-linecap="round">
-      <path d="M2 96 C70 86 150 70 226 26"/>
-      <g fill="#C9B98C" stroke="none">
-        <path d="M64 80 q-12 -16 2 -24 q14 8 4 24 q10 -2 12 6 q-12 4 -18 -6z"/>
-        <path d="M108 64 q-12 -16 2 -24 q14 8 4 24 q10 -2 12 6 q-12 4 -18 -6z"/>
-        <path d="M152 48 q-12 -16 2 -24 q14 8 4 24 q10 -2 12 6 q-12 4 -18 -6z"/>
-        <circle cx="196" cy="30" r="5"/><circle cx="208" cy="36" r="4"/>
-      </g>
-    </svg>
-    <p class="eyebrow">British Literature · Novel Poster</p>
-    <h1><span class="o">O</span>rlando</h1>
-    <p class="sub">Virginia Woolf · 1928 · subtitled “A Biography”</p>
-  </header>
-
-  <!-- hero ring diagram + thesis -->
-  <section class="hero">
-    <svg class="medallion" viewBox="0 0 200 200" role="img"
-         aria-label="Tree-ring diagram of a single self across eras">
-      <g fill="none" stroke="#C4BCA6" stroke-width="1.1">
-        <circle cx="100" cy="100" r="96"/><circle cx="100" cy="100" r="70"/>
-        <circle cx="100" cy="100" r="40"/>
-      </g>
-      <!-- highlighted era rings -->
-      <circle cx="100" cy="100" r="26" fill="none" stroke="#5C6A43" stroke-width="2"/>
-      <circle cx="100" cy="100" r="54" fill="none" stroke="#5C6A43" stroke-width="2"/>
-      <circle cx="100" cy="100" r="86" fill="none" stroke="#5C6A43" stroke-width="2"/>
-      <!-- faint extra rings for texture -->
-      <g fill="none" stroke="#C4BCA6" stroke-width="0.7" opacity=".8">
-        <circle cx="100" cy="100" r="14"/><circle cx="100" cy="100" r="62"/>
-        <circle cx="100" cy="100" r="78"/>
-      </g>
-      <!-- core -->
-      <circle cx="100" cy="100" r="9" fill="#A8823C"/>
-      <!-- nodes -->
-      <g font-family="Cormorant Garamond, serif" font-weight="700" font-size="9"
-         fill="#E7E3D4" text-anchor="middle">
-        <circle cx="100" cy="74" r="8" fill="#5C6A43"/><text x="100" y="77.3">I</text>
-        <circle cx="138" cy="138" r="8" fill="#5C6A43"/><text x="138" y="141.3">II</text>
-        <circle cx="39" cy="161" r="8" fill="#5C6A43"/><text x="39" y="164.3">III</text>
-      </g>
-    </svg>
-
-    <div class="hero-copy">
+    <div class="brandcol">
+      <p class="eyebrow">British Literature</p>
+      <h1><span class="o">O</span>rlando</h1>
+      <p class="sub">Virginia Woolf · 1928 · “A Biography”</p>
+    </div>
+    <div class="divider"></div>
+    <div class="thesiscol">
       <p class="kicker">Central Argument</p>
       <p class="thesis">Through three hundred years, two sexes, and the costume of every
-        age, Orlando keeps a single self formed at its <span class="core-word">earliest
-        and deepest</span> layer - an observing, poetic temperament. Each era rewrites the
+        age, Orlando keeps a single self formed at its <span class="core-word">earliest and
+        deepest</span> layer - an observing, poetic temperament. Each era rewrites the
         surface; the core does not merely survive, it <span class="core-word">actively
         reconstitutes</span> itself under every blow.</p>
       <p class="note">↳ Draft wording - rewrite in your own final phrasing before printing.</p>
     </div>
+  </header>
 
-    <p class="caption">Tree-rings of a single self: the core forms first and lies deepest;
-      every era is a ring grown around it - yet the centre never moves.</p>
-  </section>
-
-  <!-- era timeline -->
+  <!-- timeline band -->
   <section class="timeline">
     <h3>One life · three hundred years</h3>
     <div class="track">
-      <div class="stop key">
-        <div class="dot"></div><div class="era">Elizabethan</div>
-        <div class="meta">the hilltop oak</div><span class="rn">Ch. 1 · I</span>
-      </div>
-      <div class="stop key">
-        <div class="dot"></div><div class="era">17th c.</div>
-        <div class="meta">Nick Greene’s scorn</div><span class="rn">Ch. 2 · II</span>
-      </div>
-      <div class="stop">
-        <div class="dot"></div><div class="era">Constantinople</div>
-        <div class="meta">the change of sex</div>
-      </div>
-      <div class="stop bend">
-        <div class="dot"></div><div class="era">Victorian</div>
-        <div class="meta">the age forces marriage</div><span class="rn">surface bends</span>
-      </div>
-      <div class="stop key">
-        <div class="dot"></div><div class="era">1928</div>
-        <div class="meta">calling the self</div><span class="rn">Ch. 6 · III</span>
-      </div>
+      <div class="stop key"><div class="dot"></div><div class="era">Elizabethan</div>
+        <div class="meta">the hilltop oak</div><span class="rn">Ch. 1 · I</span></div>
+      <div class="stop key"><div class="dot"></div><div class="era">17th c.</div>
+        <div class="meta">Nick Greene’s scorn</div><span class="rn">Ch. 2 · II</span></div>
+      <div class="stop"><div class="dot"></div><div class="era">Constantinople</div>
+        <div class="meta">the change of sex</div></div>
+      <div class="stop bend"><div class="dot"></div><div class="era">Victorian</div>
+        <div class="meta">the age forces marriage</div><span class="rn">surface bends</span></div>
+      <div class="stop key"><div class="dot"></div><div class="era">1928</div>
+        <div class="meta">calling the self</div><span class="rn">Ch. 6 · III</span></div>
     </div>
   </section>
 
-  <!-- evidence -->
-  <section class="evidence">
+  <!-- main row: core diagram + three evidence cards -->
+  <section class="main">
+
+    <div class="core-cell">
+      <svg class="medallion" viewBox="0 0 200 200" role="img"
+           aria-label="Tree-ring diagram of a single self across eras">
+        <g fill="none" stroke="#C4BCA6" stroke-width="1.1">
+          <circle cx="100" cy="100" r="96"/><circle cx="100" cy="100" r="70"/>
+          <circle cx="100" cy="100" r="40"/></g>
+        <circle cx="100" cy="100" r="26" fill="none" stroke="#5C6A43" stroke-width="2"/>
+        <circle cx="100" cy="100" r="54" fill="none" stroke="#5C6A43" stroke-width="2"/>
+        <circle cx="100" cy="100" r="86" fill="none" stroke="#5C6A43" stroke-width="2"/>
+        <g fill="none" stroke="#C4BCA6" stroke-width="0.7" opacity=".8">
+          <circle cx="100" cy="100" r="14"/><circle cx="100" cy="100" r="62"/>
+          <circle cx="100" cy="100" r="78"/></g>
+        <circle cx="100" cy="100" r="9" fill="#A8823C"/>
+        <g font-family="Cormorant Garamond, serif" font-weight="700" font-size="9"
+           fill="#E7E3D4" text-anchor="middle">
+          <circle cx="100" cy="74" r="8" fill="#5C6A43"/><text x="100" y="77.3">I</text>
+          <circle cx="138" cy="138" r="8" fill="#5C6A43"/><text x="138" y="141.3">II</text>
+          <circle cx="39" cy="161" r="8" fill="#5C6A43"/><text x="39" y="164.3">III</text>
+        </g>
+      </svg>
+      <p class="core-cap">Tree-rings of a single self: the core forms first and lies
+        deepest; every era is a ring grown around it - yet the centre never moves.</p>
+    </div>
 
     <article class="card">
       <div class="cmark">
-        <svg width="50" height="50" viewBox="0 0 50 50" aria-hidden="true">
+        <svg width="48" height="48" viewBox="0 0 50 50" aria-hidden="true">
           <g fill="none" stroke="#5C6A43" stroke-width="1.1">
             <circle cx="25" cy="25" r="21"/><circle cx="25" cy="25" r="13"/></g>
-          <circle cx="25" cy="25" r="3.6" fill="#A8823C"/></svg>
-      </div>
+          <circle cx="25" cy="25" r="3.6" fill="#A8823C"/></svg></div>
       <div class="num">Evidence I</div>
       <div class="ttl">The Hilltop Oak</div>
       <div class="era">Elizabethan · Ch. 1</div>
@@ -262,12 +232,11 @@
 
     <article class="card">
       <div class="cmark">
-        <svg width="50" height="50" viewBox="0 0 50 50" aria-hidden="true">
+        <svg width="48" height="48" viewBox="0 0 50 50" aria-hidden="true">
           <g fill="none" stroke="#5C6A43" stroke-width="1.1">
             <circle cx="25" cy="25" r="21"/><circle cx="25" cy="25" r="15.5"/>
             <circle cx="25" cy="25" r="10"/></g>
-          <circle cx="25" cy="25" r="3.6" fill="#A8823C"/></svg>
-      </div>
+          <circle cx="25" cy="25" r="3.6" fill="#A8823C"/></svg></div>
       <div class="num">Evidence II</div>
       <div class="ttl">Nick Greene’s Scorn</div>
       <div class="era">17th century · Ch. 2</div>
@@ -288,34 +257,33 @@
 
     <article class="card">
       <div class="cmark">
-        <svg width="50" height="50" viewBox="0 0 50 50" aria-hidden="true">
+        <svg width="48" height="48" viewBox="0 0 50 50" aria-hidden="true">
           <g fill="none" stroke="#5C6A43" stroke-width="1.1">
             <circle cx="25" cy="25" r="22"/><circle cx="25" cy="25" r="17.5"/>
             <circle cx="25" cy="25" r="13"/><circle cx="25" cy="25" r="8.5"/></g>
-          <circle cx="25" cy="25" r="3.6" fill="#A8823C"/></svg>
-      </div>
+          <circle cx="25" cy="25" r="3.6" fill="#A8823C"/></svg></div>
       <div class="num">Evidence III</div>
       <div class="ttl">Calling the Self</div>
       <div class="era">1928 · Ch. 6</div>
       <div class="qbox"><b>The selves piled up</b>"...a great variety of selves to call
         upon... these selves of which we are built up, one on top of another, as plates are
-        piled on a waiter's hand..." until she becomes "what is called... a single self, a
+        piled on a waiter’s hand..." until she becomes "what is called... a single self, a
         real self."</div>
       <ul class="read">
         <li><span class="tag">Arc closes -</span> the eye that scanned <em>space</em> now
           surveys 300 years of <em>time</em>: same instrument, new material.</li>
         <li><span class="tag">Syntax -</span> a roll-call, self summoned after self until
           the deepest answers.</li>
-        <li><span class="tag">Many → one -</span> the selves are layers that <em>build</em>
-          one governing self; plurality is its building material.</li>
+        <li><span class="tag">Many to one -</span> the selves are layers that
+          <em>build</em> one governing self; plurality is its building material.</li>
       </ul>
       <p class="claim">Among a thousand selves, the earliest, deepest one <b>presides</b>.</p>
     </article>
   </section>
 
-  <!-- poem thread -->
+  <!-- poem thread band -->
   <div class="thread">
-    <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
+    <svg width="42" height="42" viewBox="0 0 46 46" aria-hidden="true">
       <g fill="none" stroke="#C9B98C" stroke-width="1"><circle cx="23" cy="23" r="20"/>
         <circle cx="23" cy="23" r="14"/><circle cx="23" cy="23" r="8"/></g>
       <circle cx="23" cy="23" r="3" fill="#A8823C"/></svg>
@@ -326,7 +294,7 @@
 
   <!-- footer -->
   <div class="foot">
-    <div class="who"><b>[ Your name ]</b><br>[ Course code ] · Faculty of Education, MU</div>
+    <div class="who"><b>Mykhail Poddenezhnyi</b> · [ Course code ]</div>
     <div class="defence"><b>For the defence -</b> the Victorian chapter, where the age
       forces the urge to marry, does not refute the thesis: there the <em>surface</em>
       bends while the observing core holds.</div>
